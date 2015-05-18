@@ -32,7 +32,6 @@ nmap <leader>w :w<CR>
 " Fast exiting
 nmap <leader>q: :qa<CR>
 
-
 " When vimrc is edited reload it
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
@@ -76,6 +75,3 @@ nmap <leader>4 :3winc ><CR>
 
 " Remove trailing whitespace,
 nmap <leader>t :%s/\s\+$//g<CR>
-
-autocmd FileType python set omnifunc=syntaxcomplete#Complete
-
