@@ -17,7 +17,7 @@ set ai
 " Smart indent
 set si
 
-set wrap
+set nowrap
 set lbr
 
 " Set the <leader> key
@@ -27,7 +27,10 @@ let mapleader = ","
 nmap <leader>l :set list!<CR>
 
 " Fast saving
-nmap <leader>w :w!<CR>
+nmap <leader>w :w<CR>
+
+" Fast exiting
+nmap <leader>q: :qa<CR>
 
 
 " When vimrc is edited reload it
@@ -61,5 +64,18 @@ set hlsearch
 " Turn on syntax highlighting
 syntax on
 
+" Splits
+nmap <leader>b :sp<CR>
+nmap <leader>v :vsp<CR>
+
+" Buffer window adjustments
+nmap <leader>1 :3winc +<CR>
+nmap <leader>2 :3winc -<CR>
+nmap <leader>3 :3winc <<CR>
+nmap <leader>4 :3winc ><CR>
+
+" Remove trailing whitespace,
+nmap <leader>t :%s/\s\+$//g<CR>
 
 autocmd FileType python set omnifunc=syntaxcomplete#Complete
+
